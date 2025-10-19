@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./exercise03.css" />
+  </head>
+  <body>
+    <form id="form" class="login-container">
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email" placeholder="Enter your email address" />
+        <small class="error error-email"></small>
+      </div>
+      <div class="input-group password-wrapper">
+        <label for="password">Password:</label>
+        <div class="relative">
+          <input type="password" name="password" id="password" placeholder="Enter your password" />
+          <span class="toggle-password"><i class="fa-solid fa-eye show-password"></i></span>
+        </div>
+        <small class="error error-password"></small>
+      </div>
+      <button class="login-btn">Login</button>
+      <div class="extra-links">
+        <a href="#">Forgot password?</a>
+        <span>or</span>
+        <a href="#">SignUp</a>
+      </div>
+    </form>
+    <script src="./exercise03.js"></script>
+  </body>
+</html>

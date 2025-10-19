@@ -1,0 +1,24 @@
+.container {
+  max-width: 900px;
+  margin-top: 20px;
+}
+#form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.col-md-3{
+    width: 20%;
+}
+.col-md-2{
+    width: 25%;
+}
+.col-md-1{
+    width: 10%;
+}
+table {
+  margin-top: 20px;
+}
+.action-buttons button {
+  margin-right: 5px;
+}
