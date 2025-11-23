@@ -1,0 +1,35 @@
+CREATE DATABASE SaleDB;
+USE SaleDB;
+
+CREATE TABLE Customers (
+	customerID INT PRIMARY KEY AUTO_INCREMENT,
+	firstName VARCHAR(50) NOT NULL,
+	lastName VARCHAR(50) NOT NULL,
+	email VARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE Products (
+	productID INT PRIMARY KEY AUTO_INCREMENT,
+    productName VARCHAR(100) NOT NULL,
+    price DECIMAL(10.2)
+);
+
+CREATE TABLE Orders (
+	orderID INT PRIMARY KEY AUTO_INCREMENT,
+    customerID INT NOT NULL,
+    orderDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    totalAmount DECIMAL(10.2) NOT NULL,
+    FOREIGN KEY (stomerID) REFERENCES Customers(customerID)
+);
+
+CREATE TABLE orderItems (
+	orderItemID INT PRIMARY KEY AUTO_INCREMENT,
+    orderID INT NOT NULL,
+    productID INT NOT NULL,
+    quantity INT NOT NULL,
+    price DECIMAL(10.2),
+    FOREIGN KEY (orderID) REFERENCES Orders(orderID),
+    FOREIGN KEY (productID) REFERENCES Products(productID)
+);
+
+CREATE INDEX idx_orderID ON orderItems(orderID);
